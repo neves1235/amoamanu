@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arthur & Emanuelly 💕</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ============================================
+       CORAÇÕES CAINDO - Fundo
+       ============================================ -->
+  <div class="hearts-container" id="heartsContainer">
+    <!-- Os corações serão gerados via JavaScript -->
+  </div>
+
+  <div class="container">
+    <!-- Cabeçalho romântico -->
+    <header>
+      <h1>Arthur & Emanuelly</h1>
+      <p class="subtitle">💗 Desde 15 de Abril de 2025 — um amor que só cresce 💗</p>
+    </header>
+
+    <!-- Contador de dias e horas -->
+    <section class="counter-card">
+      <div class="time-grid">
+        <div class="time-item">
+          <span id="dias" class="numero">00</span>
+          <span class="label">Dias</span>
+        </div>
+        <div class="time-item">
+          <span id="horas" class="numero">00</span>
+          <span class="label">Horas</span>
+        </div>
+        <div class="time-item">
+          <span id="minutos" class="numero">00</span>
+          <span class="label">Minutos</span>
+        </div>
+        <div class="time-item">
+          <span id="segundos" class="numero">00</span>
+          <span class="label">Segundos</span>
+        </div>
+      </div>
+      <p class="mensagem-amor">✨ Cada segundo ao seu lado é eterno ✨</p>
+    </section>
+
+    <!-- Galeria de fotos -->
+    <div class="galeria-wrapper">
+      <div class="galeria-titulo">
+        <span>📸 Nossos Momentos Especiais</span>
+      </div>
+      
+      <!-- Linha 1 de fotos -->
+      <div class="fotos-linha">
+        <div class="foto-item" data-index="0">
+          <img src="https://i.ibb.co/KjcWfThQ/1.jpg" alt="Foto 1" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="1">
+          <img src="https://i.ibb.co/dsqHx49m/2.jpg" alt="Foto 2" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="2">
+          <img src="https://i.ibb.co/CKnf7wQp/3.jpg" alt="Foto 3" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="3">
+          <img src="https://i.ibb.co/27ybkk61/4.jpg" alt="Foto 4" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="4">
+          <img src="https://i.ibb.co/r2QtCcyB/5.jpg" alt="Foto 5" class="foto-galeria" loading="lazy">
+        </div>
+      </div>
+      
+      <!-- Linha 2 de fotos (novas) -->
+      <div class="fotos-linha">
+        <div class="foto-item" data-index="5">
+          <img src="https://i.ibb.co/sJHhh476/6.jpg" alt="Foto 6" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="6">
+          <img src="https://i.ibb.co/fzpRwjLZ/7.jpg" alt="Foto 7" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="7">
+          <img src="https://i.ibb.co/sJcPpmN7/8.jpg" alt="Foto 8" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="8">
+          <img src="https://i.ibb.co/wbV7xYN/9.jpg" alt="Foto 9" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="9">
+          <img src="https://i.ibb.co/Z6bMcSMx/10.jpg" alt="Foto 10" class="foto-galeria" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Linha 3 de fotos (novas) -->
+      <div class="fotos-linha">
+        <div class="foto-item" data-index="10">
+          <img src="https://i.ibb.co/bRrgLxTS/11.jpg" alt="Foto 11" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="11">
+          <img src="https://i.ibb.co/nNgybP7L/12.jpg" alt="Foto 12" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="12">
+          <img src="https://i.ibb.co/NgsfmvsK/13.jpg" alt="Foto 13" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="13">
+          <img src="https://i.ibb.co/zHRrBJtZ/14.jpg" alt="Foto 14" class="foto-galeria" loading="lazy">
+        </div>
+        <div class="foto-item" data-index="14">
+          <img src="https://i.ibb.co/399CpZkw/15.jpg" alt="Foto 15" class="foto-galeria" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé carinhoso -->
+    <footer>
+      <p>💖 Feito com todo o amor do mundo para você, Emanuelly 💖</p>
+      <p class="datas">💞 Conhecemos em 2024 • Namorando desde 15/04/2025 💞</p>
+    </footer>
+  </div>
+
+  <!-- ============================================
+       LIGHTBOX - Visualização em tela cheia
+       ============================================ -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+      <img class="lightbox-image" id="lightboxImage" src="" alt="Foto ampliada">
+      <div class="lightbox-counter" id="lightboxCounter">1 / 15</div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // ============================================
+    // 1. CORAÇÕES CAINDO
+    // ============================================
+    (function() {
+      const container = document.getElementById('heartsContainer');
+      const heartEmojis = ['❤️', '💕', '💗', '💖', '💘', '💝', '♥️'];
+      const totalHearts = 25;
+
+      for (let i = 0; i < totalHearts; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+        
+        heart.style.left = Math.random() * 100 + '%';
+        const size = Math.random() * 22 + 14;
+        heart.style.fontSize = size + 'px';
+        const duration = Math.random() * 10 + 8;
+        heart.style.animationDuration = duration + 's';
+        heart.style.animationDelay = Math.random() * 10 + 's';
+        heart.style.opacity = Math.random() * 0.4 + 0.2;
+        
+        container.appendChild(heart);
+      }
+    })();
+
+    // ============================================
+    // 2. CONTADOR DE DIAS, HORAS, MINUTOS E SEGUNDOS
+    // ============================================
+    (function() {
+      const dataInicio = new Date('2025-04-15T00:00:00').getTime();
+      const diasEl = document.getElementById('dias');
+      const horasEl = document.getElementById('horas');
+      const minutosEl = document.getElementById('minutos');
+      const segundosEl = document.getElementById('segundos');
+
+      function atualizarContador() {
+        const agora = Date.now();
+        let diff = agora - dataInicio;
+        if (diff < 0) diff = 0;
+
+        const segundosTotais = Math.floor(diff / 1000);
+        const dias = Math.floor(segundosTotais / 86400);
+        const horas = Math.floor((segundosTotais % 86400) / 3600);
+        const minutos = Math.floor((segundosTotais % 3600) / 60);
+        const segundos = segundosTotais % 60;
+
+        diasEl.textContent = String(dias).padStart(2, '0');
+        horasEl.textContent = String(horas).padStart(2, '0');
+        minutosEl.textContent = String(minutos).padStart(2, '0');
+        segundosEl.textContent = String(segundos).padStart(2, '0');
+      }
+
+      atualizarContador();
+      setInterval(atualizarContador, 1000);
+    })();
+
+    // ============================================
+    // 3. LIGHTBOX - Clique na foto para ver completa
+    // ============================================
+    (function() {
+      const fotos = document.querySelectorAll('.foto-item');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightboxImage');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lightboxPrev = document.getElementById('lightboxPrev');
+      const lightboxNext = document.getElementById('lightboxNext');
+      const lightboxCounter = document.getElementById('lightboxCounter');
+      
+      let currentIndex = 0;
+      const totalFotos = fotos.length;
+
+      const imageUrls = [
+        'https://i.ibb.co/KjcWfThQ/1.jpg',
+        'https://i.ibb.co/dsqHx49m/2.jpg',
+        'https://i.ibb.co/CKnf7wQp/3.jpg',
+        'https://i.ibb.co/27ybkk61/4.jpg',
+        'https://i.ibb.co/r2QtCcyB/5.jpg',
+        'https://i.ibb.co/sJHhh476/6.jpg',
+        'https://i.ibb.co/fzpRwjLZ/7.jpg',
+        'https://i.ibb.co/sJcPpmN7/8.jpg',
+        'https://i.ibb.co/wbV7xYN/9.jpg',
+        'https://i.ibb.co/Z6bMcSMx/10.jpg',
+        'https://i.ibb.co/bRrgLxTS/11.jpg',
+        'https://i.ibb.co/nNgybP7L/12.jpg',
+        'https://i.ibb.co/NgsfmvsK/13.jpg',
+        'https://i.ibb.co/zHRrBJtZ/14.jpg',
+        'https://i.ibb.co/399CpZkw/15.jpg'
+      ];
+
+      function openLightbox(index) {
+        currentIndex = index;
+        lightboxImage.src = imageUrls[currentIndex];
+        lightboxCounter.textContent = `${currentIndex + 1} / ${totalFotos}`;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + totalFotos) % totalFotos;
+        lightboxImage.src = imageUrls[currentIndex];
+        lightboxCounter.textContent = `${currentIndex + 1} / ${totalFotos}`;
+      }
+
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % totalFotos;
+        lightboxImage.src = imageUrls[currentIndex];
+        lightboxCounter.textContent = `${currentIndex + 1} / ${totalFotos}`;
+      }
+
+      fotos.forEach((foto, index) => {
+        foto.addEventListener('click', () => {
+          openLightbox(index);
+        });
+      });
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxPrev.addEventListener('click', prevImage);
+      lightboxNext.addEventListener('click', nextImage);
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+          prevImage();
+        } else if (e.key === 'ArrowRight') {
+          nextImage();
+        }
+      });
+
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      lightbox.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+
+      lightbox.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) {
+            nextImage();
+          } else {
+            prevImage();
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
